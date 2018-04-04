@@ -1,0 +1,61 @@
+<div class="content">
+
+    <div>
+        <h4>La durée totale réelle des appels effectués après le 15/02/2012 (inclus)</h4>
+        <ul>
+            <li>
+                <strong>
+                    <?= $total_appel ?>sec
+                    <?php
+                        $hours = floor($total_appel / 3600);
+                        $mins = floor($total_appel / 60 % 60);
+                        $secs = floor($total_appel % 60);
+                        
+                        $timeFormat = sprintf('%02dheures %02dmin %02dsec', $hours, $mins, $secs);
+                    ?>
+                    ( ou <?= $timeFormat ?> )
+                </strong>
+            </li>
+        </ul>
+    <div>
+
+    <hr/>
+    <div>
+        <h4>TOP 10 des volumes data facturés en dehors de la tranche horaire 8h00-18h00, par abonné.</h4>
+        <table class="table table-striped">
+            <thead>
+                <th>Abonné ID</th>
+                <th>Volume</th>
+                <th>Heure</th>
+            </thead>
+            <tbody>
+                <?php foreach ($volumes_data as $row): ?>
+                <tr>
+                    <td><?= $row['abonne_id'] ?></td>
+                    <td><?= $row['volume_data_facture'] ?></td>
+                    <td><?= $row['heure'] ?></td>
+                </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+        
+    <div>
+
+    <hr/>
+    <div>
+        <h4>La quantité totale de SMS envoyés par l'ensemble des abonnés</h4>
+        <ul>
+            <li><strong><?= $total_sms ?></strong></li>
+        </ul>
+    <div>
+
+</div>
+
+<hr/>
+
+<div>
+    <ul>
+        <li><a href="<?=$this->url('appel', ['action' => 'index'])?>">Back to main page</a></li> 
+        <li><a href="<?= $this->url('appel', ['action' => 'load']) ?>">Reload data from file</a></li>
+    </ul>
+</div>

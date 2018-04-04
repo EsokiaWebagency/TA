@@ -1,0 +1,22 @@
+<div class="content">
+
+    <?php if ($error): ?>
+        <div class="alert alert-danger">
+            <strong>Error!</strong> <?=$message?>.
+        </div>
+    <?php endif;?>
+
+    <?php if (!$error): ?>
+        <div class="alert alert-success">
+            <strong>Success!</strong> <?= $file ?> has been imported.
+        </div>
+        <div>
+        <ul>
+            <li><a href="<?=$this->url('appel', ['action' => 'statistic'])?>">View statistic</a></li>
+            <li><a href="<?=$this->url('appel', ['action' => 'index'])?>">Back to main page</a></li>            
+        </ul>
+        </div>
+    <?php endif;?>
+
+<div>
+
