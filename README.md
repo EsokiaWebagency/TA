@@ -1,4 +1,4 @@
-## GAC Technology
+# GAC Technology
 
 ## Config file
 
@@ -7,27 +7,27 @@ Setup for database connexion is store within:
 config/autoload/local.php
 ```
 
-## Database
+## Database and data source
 
-# Dump of database is located in
+Dump of database is located in
 ```
 data/gac_technology.sql
 ```
 
-# CSV data source
+CSV data source
 ```
 data/tickets_appels_201202.csv 
 ```
 
 ## Source Code
 
-# Document root
+Document root
 ```
 public/
 ```
 
 
-# Module used
+Module used
 ```
 module/Application
 ```
