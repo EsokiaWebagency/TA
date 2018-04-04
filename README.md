@@ -38,6 +38,6 @@ $ cd public
 $ php -S 0.0.0.0:8081
 ```
 
-Open http://127.0.0.1:8081 on browser to see the app runing
+Open http://127.0.0.1:8081 on browser to see the app running
 
 Enjoy!
